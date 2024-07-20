@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
       feedbackDiv.style.color = "#28a745";
       return;
     } else {
-      feedbackDiv.innerHTML = messages.push("Incorrect details") + "";
+      feedbackDiv.innerHTML = messages.push("Incorrect details").join + "br";
       feedbackDiv.style.color = "#dc3545";
     }
     let password = document.getElementById("password").value.trim();
