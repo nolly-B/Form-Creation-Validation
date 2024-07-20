@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (username.length < 3) {
       isValid = false;
-      feedbackDiv.textContent = messages[0];
+      feedbackDiv.textContent = messages.push("Incorrect username");
       return;
     }
     let feedbackDiv = document.getElementById("form-feedback");
@@ -22,13 +22,13 @@ document.addEventListener("DOMContentLoaded", function () {
       feedbackDiv.style.color = "#28a745";
       return;
     } else {
-      feedbackDiv.innerHTML = messages[0] + "";
+      feedbackDiv.innerHTML = messages.push("Incorrect details") + "";
       feedbackDiv.style.color = "#dc3545";
     }
     let password = document.getElementById("password").value.trim();
     if (password.length >= 8) {
       isValid = false;
-      feedbackDiv.textContent = messages[0];
+      feedbackDiv.textContent = messages.push("Password invalid");
       return;
     }
     let email = document.getElementById("email").value.trim();
@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     } else {
       isValid = false;
-      feedbackDiv.textContent = messages[0];
+      feedbackDiv.textContent = messages.push("Incorrect email format");
       return;
     }
   });
